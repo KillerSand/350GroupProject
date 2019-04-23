@@ -32,4 +32,4 @@ def saveList(characterList):
 
     #example  of printed list
     print("Original Names: ")
-    print(characterList)
+    print(names)
