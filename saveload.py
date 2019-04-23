@@ -1,17 +1,16 @@
 import os
 import pickle
 
-list= [1,2,3,4,5]
-file = 'list.txt'
-
-
 def writeFile(list):
-    pickle.dump(list, open("list.save", "wb"))
+    file = input("Enter a file name: ")
+    file = file + ".save"
+    pickle.dump(list, open(file, "wb"))
     # with open(file, 'w') as f:
     #   f.write(str(list))
     #  f.close()
 
 def readFile(file):
+    file = file + ".save"
     names = pickle.load(open(file, "rb"))
     print(names[0].race)
     #with open(file, 'r') as f:
