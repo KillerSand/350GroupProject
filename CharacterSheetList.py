@@ -12,6 +12,24 @@ class characters:
                 print("Enter a valid integer!")
                 x = True
 
+        # Name
+        self.name = input("What is the name of the player?: ")
+
+        # Race
+        self.race = input("What is your character's race?: ")
+
+        # Age
+        while y:
+            try:
+                self.age = int(input("What is the age of your character?: "))
+                y = False
+            except ValueError:
+                print("Please enter a valid integer")
+                y = True
+
+        # Class
+        self.job = input("What your character's class?: ")
+
         self.name = name
         self.job = ""
         self.age = 0
