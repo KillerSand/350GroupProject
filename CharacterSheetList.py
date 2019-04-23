@@ -31,11 +31,10 @@ class characters:
         #Class
         self.job = input("What your character's class?: ")
 
-        self.name =
         self.job = ""
         self.age = 0
         self.height = 0
         self.weight = 0
         self.race = ""
-        self.attributes = attribute()
+        self.attributes = Attributes()
 
