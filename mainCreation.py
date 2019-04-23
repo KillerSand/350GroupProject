@@ -2,6 +2,7 @@ from clear_screen import clear
 from CharacterSheetList import *
 from save import *
 
+# This is testing using git from pycharm
 characterList = []
 # Starts the official character list
 
