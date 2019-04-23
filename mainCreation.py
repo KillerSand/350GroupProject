@@ -1,6 +1,7 @@
 from clear_screen import *
 from CharacterSheetList import *
 from save import *
+from saveload import *
 
 # This is testing using git from pycharm
 characterList = []
@@ -26,12 +27,11 @@ while True:     # This while statement lets the main menu loop
             characterList.append(characters(name))
 
         elif x == 2:
-            saveList(characterList)
-
-        # elif x == 3:
-        #     loadList()
-        # elif x == 4:
-        #     deleteList()
+            writeFile(characterList)
+        elif x == 3:
+            readFile(input("Enter the file name: "))
+            # elif x == 4:
+            # deleteList()
         elif x == 5:
             print("Thank You for using our Character Creation Program")
             quit(0)
