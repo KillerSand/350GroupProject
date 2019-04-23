@@ -14,7 +14,7 @@ class characters:
 
         self.playerName = playerName
         # Name
-        self.name = input("What is the name of the player?: ")
+        self.name = input("What is the name of the character?: ")
 
         # Race
         self.race = input("What is your character's race?: ")
@@ -28,10 +28,10 @@ class characters:
                 print("Please enter a valid integer")
                 y = True
 
-        # Class
+        #Class
         self.job = input("What your character's class?: ")
 
-        self.name = name
+        self.name =
         self.job = ""
         self.age = 0
         self.height = 0
