@@ -1,7 +1,7 @@
 from Attributes import *
 
 class characters:
-    def __init__(self,name):
+    def __init__(self,playerName):
         x = True
         self.health = 0
         while x:
@@ -12,6 +12,7 @@ class characters:
                 print("Enter a valid integer!")
                 x = True
 
+        self.playerName = playerName
         # Name
         self.name = input("What is the name of the player?: ")
 

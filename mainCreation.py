@@ -18,6 +18,7 @@ while True:     # This while statement lets the main menu loop
         if x == 1:
             while True:
                 name = input("Who will be using this character?: " )
+                # name will be playerName for using character method
                 if input("Will " + name + " be using this character? (Y or N): ").lower() == 'y':
                     # Check if user's input is y and if it is exit the loop and continue with program
                     # Otherwise prompt user for character's name again
