@@ -20,6 +20,7 @@ class characters:
         self.race = input("What is your character's race?: ")
 
         # Age
+        y = True
         while y:
             try:
                 self.age = int(input("What is the age of your character?: "))
