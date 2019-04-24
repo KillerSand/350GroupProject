@@ -1,6 +1,5 @@
-from clear_screen import *
+#from clear_screen import *
 from CharacterSheetList import *
-from save import *
 from saveload import *
 
 # This is testing using git from pycharm
@@ -38,5 +37,5 @@ while True:     # This while statement lets the main menu loop
         else:
             print("Please enter a number 1-5!")
     except ValueError:
-        clear()
+        #clear()
         print("Please enter a proper number! ")

@@ -1,4 +1,5 @@
 from math import floor
+import roller
 
 # Skills and from what they derive
 skills = {
@@ -90,7 +91,10 @@ class Attributes:
 
     # FIXME: Roll our stats randomly
     def RollStats(self):
-        raise NotImplementedError()
+        stats = roller.dieRoller()
+        for stat, value in zip(["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],stats):
+            setattr(self, stat, value)
+
 
     # Ask user for each stat
     def AskStats(self):
