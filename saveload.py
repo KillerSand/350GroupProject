@@ -2,25 +2,39 @@ import os
 import pickle
 
 def writeFile(list):
-    file = input("Enter a file name: ")
-    file = file + ".save"
+    file = askFile()
     pickle.dump(list, open(file, "wb"))
     # with open(file, 'w') as f:
     #   f.write(str(list))
     #  f.close()
 
-def readFile(file):
-    file = file + ".save"
-    names = pickle.load(open(file, "rb"))
+def readFile():
+    file = askFile()
+    if not os.path.exists(file):
+        print(f"The file '{file}' does not exist")
+    try:
+        names = pickle.load(open(file, "rb"))
+    except:
+        print(f"Could not load {file}")
     print(names[0].race)
     #with open(file, 'r') as f:
     #    filecontents = f.read()
     #    print(filecontents)
     #   f.close()
 
-def deleteFile(file):
-    if os.path.exists("list.txt"):
-        os.remove("list.txt")
-        print("The file was deleted")
+def deleteFile():
+    file = askFile()
+    if os.path.exists(file):
+        os.remove(file)
+        print(f"The file '{file}' was deleted")
     else:
-        print("The file does not exist")
+        print(f"The file '{file}' does not exist")
+
+def askFile():
+    print("\nCurrent Files:")
+    for n in filter(lambda i: i.endswith(".save"), os.listdir(".")):
+        print(n)
+    file = input("Enter the file name: ")
+    if not file.endswith(".save"):
+        file = file + ".save"
+    return file

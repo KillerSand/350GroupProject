@@ -16,19 +16,11 @@ while True:     # This while statement lets the main menu loop
     try:
         x = int(input("Which function would you like to use(enter a number): "))
         if x == 1:
-            while True:
-                name = input("Who will be using this character?: " )
-                # name will be playerName for using character method
-                if input("Will " + name + " be using this character? (Y or N): ").lower() == 'y':
-                    # Check if user's input is y and if it is exit the loop and continue with program
-                    # Otherwise prompt user for character's name again
-                    break
-            characterList.append(characters(name))
-
+            characterList.append(characters())
         elif x == 2:
             writeFile(characterList)
         elif x == 3:
-            readFile(input("Enter the file name: "))
+            readFile()
             # elif x == 4:
             # deleteList()
         elif x == 5:
