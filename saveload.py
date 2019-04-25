@@ -14,9 +14,10 @@ def readFile():
         print(f"The file '{file}' does not exist")
     try:
         characterList = pickle.load(open(file, "rb"))
+        return characterList
     except:
         print(f"Could not load {file}")
-    return characterList
+
     #with open(file, 'r') as f:
     #    filecontents = f.read()
     #    print(filecontents)
