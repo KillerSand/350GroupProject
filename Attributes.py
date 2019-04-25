@@ -73,11 +73,17 @@ class Attributes:
     def GetAttrib(self, attribName):
         return {
             "Str" : self.Strength,
+            "Strength" : self.Strength,
             "Dex" : self.Dexterity,
+            "Dexterity" : self.Dexterity,
             "Con" : self.Constitution,
+            "Constitution" : self.Constitution,
             "Int" : self.Intelligence,
+            "Intelligence" : self.Intelligence,
             "Wis" : self.Wisdom,
-            "Cha" : self.Charisma
+            "Wisdom" : self.Wisdom,
+            "Cha" : self.Charisma,
+            "Charisma" : self.Charisma
         }[attribName]
 
     # Return attribute mod from name
