@@ -26,16 +26,15 @@ def dieRoller():
             temp_stats += die
         stats.append(temp_stats)
         count += 1
-    print('Here are your results:\n')
-    for stat in stats:
-        print(stat)
+    # print('Here are your results:\n')
+    # for stat in stats:
+    #     print(stat)
     # print(die1)
     # print(die2)
     # print(die3)
     # print(die4)
     # print(die5)
     # print(die6)
-    print('\n')
     return stats
     #question = input('Would you like to roll the dice? [Y/N]\n')
 # else:

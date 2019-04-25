@@ -94,6 +94,8 @@ class Attributes:
         stats = roller.dieRoller()
         for stat, value in zip(["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],stats):
             setattr(self, stat, value)
+            print(stat + " = " + str(value))
+        print("\n")
 
 
     # Ask user for each stat
