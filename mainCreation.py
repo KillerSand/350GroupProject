@@ -21,8 +21,8 @@ while True:     # This while statement lets the main menu loop
             writeFile(characterList)
         elif x == 3:
             readFile()
-            # elif x == 4:
-            # deleteList()
+        elif x == 4:
+            deleteFile()
         elif x == 5:
             print("Thank You for using our Character Creation Program")
             quit(0)
