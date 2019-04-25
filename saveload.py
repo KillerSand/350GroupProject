@@ -13,10 +13,10 @@ def readFile():
     if not os.path.exists(file):
         print(f"The file '{file}' does not exist")
     try:
-        names = pickle.load(open(file, "rb"))
+        characterList = pickle.load(open(file, "rb"))
     except:
         print(f"Could not load {file}")
-    print(names[0].race)
+    return characterList
     #with open(file, 'r') as f:
     #    filecontents = f.read()
     #    print(filecontents)
